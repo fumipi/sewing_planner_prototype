@@ -1,4 +1,4 @@
-# ここにタイトルを入れる
+# Sewing Planner Prototype
 
 ## DEMO
 
