@@ -2,7 +2,7 @@
 
 ## DEMO
 
-  - sewing-planner-prototype.vercel.app
+  - [Sewing Planner](sewing-planner-prototype.vercel.app)
 
 ## 紹介と使い方
 
