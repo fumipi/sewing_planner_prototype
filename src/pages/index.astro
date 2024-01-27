@@ -1,28 +1,55 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Header from '../components/Header.astro';
-import Hero from '../components/Hero.astro';
-import ThreePoints from '../components/ThreePoints.astro';
-import PatternRanking from '../components/PatternRanking.astro';
-import Steps from '../components/Steps.astro';
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Hero from "../components/Hero.astro";
+import ThreePoints from "../components/ThreePoints.astro";
+import PatternRanking from "../components/PatternRanking.astro";
+import Steps from "../components/Steps.astro";
+import Button from "../components/Button.astro";
+
+const threePointsData = [
+  {
+    title: "Find the best pattern",
+    text: "See what others have sewn and get inspired to do your own thing.",
+  },
+  {
+    title: "Plan your project",
+    text: "Use our tool to plan your project. You can also use our tools to calculate how much fabric you need.",
+  },
+  {
+    title: "Share your creation",
+    text: "Share your creation with the community and inspire others to sew.",
+  },
+];
 ---
 
 <Layout title="Sewing Planner">
-	<main>
-		<Header/>
-        <Hero 
-            title="Plan your next sewing project with confidence", 
-            copy="This is a prototype dummy site for an upcoming project. It will be a sewing planner that will help you plan your next sewing project with confidence.", 
-            cta="Register", 
-            login="Login",
-			bg = "https://images.unsplash.com/photo-1561822713-da02f57225b2?q=80&w=2342&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        />
-		<ThreePoints/>
-		<PatternRanking />
-		<Steps/>
-    </main>
-	</main>
+  <main>
+    <Header />
+    <Hero
+      title="Plan your next sewing project with confidence"
+      copy="This is a prototype dummy site for an upcoming project. It will be a sewing planner that will help you plan your next sewing project with confidence."
+      cta="Register"
+      login="Login"
+      bg="https://images.unsplash.com/photo-1561822713-da02f57225b2?q=80&w=2342&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    />
+    <section class="text-gray-600 body-font">
+      <div class="container px-5 py-24 mx-auto">
+        <div
+          class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6"
+        >
+          {
+            threePointsData.map((data) => (
+              <ThreePoints title={data.title} text={data.text} />
+            ))
+          }
+        </div>
+        <Button cta="Register" />
+      </div>
+    </section>
+    <PatternRanking />
+    <Steps />
+  </main>
 </Layout>
 
-<style>
-</style>
+<style></style>
